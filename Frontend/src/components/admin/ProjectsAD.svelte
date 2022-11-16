@@ -39,7 +39,7 @@
 					name="picture"
 					height="250px"
 				/>
-				<div>
+				<div class="desc">
 					<p><strong>Description</strong></p>
 					<p class="description">{project.description}</p>
 				</div>
@@ -67,14 +67,15 @@
 	}
 	.project{
 		width: 350px;
-		max-height: 480px;
+		height: 460px;
+		max-height: 460px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		margin: 20px;
 		padding: 5px;
-		border-radius: 3px;
+		border-radius: 15px;
 		background-color: #f5f5f5;
 		overflow: hidden;
 		position: relative;
@@ -85,11 +86,11 @@
 		height: auto;
 		max-height: 250px;
 		border-radius: 3px;
-		margin-top: 40px;
+		margin-top: 50px;
 	}
 
 	h2{
-		text-decoration: underline;
+		/* text-decoration: underline; */
 		text-align: center;
 		z-index: 1;
 	}
@@ -121,20 +122,28 @@
 
 	.description{
 		overflow-y: scroll;
-		height: 100px;
+		height: 110px;
 		width: 320px;
 		background-color: #fff;
 		padding: 5px;
-		border-radius: 3px;
+		border-radius: 13px;
+	}
+
+	.desc{
+		margin-top: -10px;
 	}
 
 	.category{
 		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 7px 0px;
 	}
 
-	strong{
+	/* strong{
 		text-decoration: underline;
-	}
+	} */
 	
    
 </style>

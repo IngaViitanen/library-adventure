@@ -113,7 +113,8 @@
                 this.frameY = girlTransform;
                 this.fps = 6;
                 this.frameTimer = 0;
-                this.frameInterval = 1000 / this.fps;
+                // controls the speed of the sprite animation
+                this.frameInterval = 800 / this.fps;
                 this.maxFrame = 4;
                 this.speed = 0;
                 this.vy = 0;

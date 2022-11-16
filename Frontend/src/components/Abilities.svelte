@@ -1,4 +1,4 @@
- <script>
+<script>
     import {allKidsBooksRead, primaryBooksRead, mobilityBooksRead, adolescenceBooksRead, informativeBooksRead, tree, spell, light, gotWand, goHome } from '../stores.js'
     import { fly } from 'svelte/transition';
     import { onMount } from 'svelte';
@@ -6,14 +6,14 @@
     let showHide = 'open'
     let dimh = ''
     let wand = ''
+    let hide = ''
 
     // $: if($allKidsBooksRead || $adolescenceBooksRead || $mobilityBooksRead || $primaryBooksRead || $informativeBooksRead)
     // { showHideAbilities() }
 
     onMount(() => {
-            if(location.pathname === '/library'){
-                    show = true
-                    showHide = 'close'
+            if(location.pathname === '/dashboard'){
+                    hide = 'hide'
             }
     })
 
@@ -61,7 +61,7 @@
 
  </script>
 
-<section >
+<section class={hide === 'hide' ? 'hide' : ''}>
     <!-- <button class={"show-hide " + (!show ? 'scaleBtn' : '')} on:click={showHideAbilities}>{showHide}</button>
     {#if show} -->
     <article in:fly="{{ y: 200, duration: 800 }}" out:fly="{{ y: 200, duration: 1500}}">
@@ -121,10 +121,14 @@
         transition-duration: 500ms;
     }
 
-    section.hidden{
+    section.hide{
+        opacity: 0;
+    }
+
+    /* section.hidden{
         scale: 0.3;
         translate: -50% 40px;
-    }
+    } */
     
     article{
         width: 300px;

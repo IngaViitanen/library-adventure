@@ -80,7 +80,7 @@
 
 </script>
 
-<button class="edit-btn" on:click={toEdit(id, i)}>Edit</button>
+<button class="edit-btn" on:click={toEdit(id, i)}></button>
 {#if $isEditing && $show[i]}
 <form>
     <input class="inputs" type="text" bind:value={project.title}>
@@ -110,11 +110,14 @@
     .edit-btn{
         font-size: 1.2em;
         border: none;
-        background: transparent;
+        background: url(../images/icons/edit.png);
+        background-size: contain;
+        height: 30px;
+        width: 30px;
         cursor: pointer;
         padding: 0;
         margin-left: 7px;
-        text-decoration: underline;
+        /* text-decoration: underline; */
         z-index: 1000;
     }
 

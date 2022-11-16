@@ -31,10 +31,10 @@
 			<!-- <Link to="/" >Home</Link>
 			<Link to="library">Library</Link>
 			<Link to="dashboard">Dashboard</Link> -->
-			<Link to="all-projects" class="link"> <h3>{$_("homepage.allProjects")}</h3> </Link>
+			<!-- <Link to="all-projects" class="link"> <h3>{$_("homepage.allProjects")}</h3> </Link> -->
 		</nav>
 
-		<a href="https://www.di-mh.com/" target="_blank" >dimh</a>
+		<a href="https://www.di-mh.com/" target="_blank" rel="noreferrer">dimh</a>
 	
 		<!-- <img src="circle-01.png" alt="circle"> -->
 
@@ -63,9 +63,9 @@
 			<Library />
 		</Route>
 
-		<Route path="all-projects">
+		<!-- <Route path="all-projects">
 			<AllProjects />
-		</Route>
+		</Route> -->
 
 		<ProtectedRoute path="dashboard" component={Dashboard} />
 	</Router>
@@ -87,12 +87,12 @@
 		text-decoration: none;
 	}
 
-	:global(a) h3 {
+	/* :global(a) h3 {
 		position: fixed;
 		left: 1rem;
 		bottom: 4.5rem;
 		z-index: 1;
 		color: #ffffff;
-	}
+	} */
 
 </style>
